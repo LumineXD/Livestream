@@ -21,6 +21,22 @@
     
     <!-- Proteksi Source Code -->
     <script>
+        // Deteksi jika Developer Tools sudah terbuka saat page load
+        const checkDevTools = setInterval(function() {
+            const threshold = 160;
+            
+            if (window.outerWidth - window.innerWidth > threshold || 
+                window.outerHeight - window.innerHeight > threshold) {
+                clearInterval(checkDevTools);
+                // Tutup halaman atau redirect
+                window.close();
+                // Jika window.close() tidak bekerja, redirect ke 404
+                if (!window.closed) {
+                    window.location.href = '/404.html';
+                }
+            }
+        }, 100);
+
         // Disable text selection dan copy
         document.oncontextmenu = function() {
             return false;
