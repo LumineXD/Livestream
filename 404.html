@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Under Development</title>
+    <title>Under Maintenance</title>
     <style>
         * {
             margin: 0;
@@ -83,15 +83,19 @@
         }
 
         .error-icon {
-            font-size: 80px;
             margin-bottom: 20px;
-            animation: shake 0.5s;
+            animation: fadeIn 0.5s;
         }
 
-        @keyframes shake {
-            0%, 100% { transform: translateX(0); }
-            25% { transform: translateX(-10px); }
-            75% { transform: translateX(10px); }
+        .error-icon img {
+            max-width: 120px;
+            height: auto;
+            filter: drop-shadow(0 0 10px rgba(255, 165, 0, 0.3));
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
         }
     </style>
 
@@ -112,11 +116,11 @@
 </head>
 <body>
     <div class="error-container">
-        <div class="error-icon">🔧</div>
+        <div class="error-icon"><img src="https://www.pngegg.com/en/png-plalw" alt="Under Maintenance"></div>
         <div class="error-code">⏳</div>
-        <div class="error-title">Under Development</div>
+        <div class="error-title">Under Maintenance</div>
         <div class="error-message">
-            Halaman ini sedang dalam pengembangan.<br>
+            Halaman ini sedang dalam pemeliharaan.<br>
             Silahkan kembali lagi nanti.
         </div>
         <button class="back-button" onclick="goHome()">Kembali ke Halaman Utama</button>
