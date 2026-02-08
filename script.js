@@ -88,7 +88,7 @@ document.addEventListener('mousedown', function(e) {
 
 // ============ END KEAMANAN ============
 
-const API_URL = 'https://api.ngidolihub.my.id/api/stream/v3/playback?slug=pertaruhan-cinta-2026-02-05-260201195523';
+const API_URL = 'https://api.ngidolihub.my.id/api/stream/v3/playback?slug=cara-meminum-ramune-2026-02-08-260201195929';
 const videoElement = document.getElementById('livestreamVideo');
 const videoSource = document.getElementById('videoSource');
 const deviceInfo = document.getElementById('deviceInfo');
@@ -150,3 +150,4 @@ document.addEventListener('DOMContentLoaded', function() {
     detectDevice();
     initLivestream();
 });
+
