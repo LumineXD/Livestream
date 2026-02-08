@@ -3,8 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="disable-devtools" content="true">
     <title>Livestream</title>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Disable right-click context menu -->
+    <style>
+        body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+        }
+    </style>
+    
+    <!-- Proteksi Source Code -->
+    <script>
+        // Disable text selection dan copy
+        document.oncontextmenu = function() {
+            return false;
+        };
+        
+        document.onkeydown = function(e) {
+            // Cegah F12, Ctrl+Shift+I, Ctrl+Shift+J
+            if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73) || 
+               (e.ctrlKey && e.shiftKey && e.keyCode == 74) || 
+               (e.ctrlKey && e.keyCode == 85)) {
+                return false;
+            }
+        };
+    </script>
 </head>
 <body>
     <div class="container">
@@ -20,4 +50,3 @@
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="script.js"></script>
 </body>
-</html>

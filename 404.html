@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>404 - URL Not Found</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1e1e1e 0%, #0a0a0a 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 0, 0, 0.1);
+            border: 2px solid #ff4444;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+            max-width: 600px;
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            color: #ff4444;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+        }
+
+        .error-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ffaaaa;
+        }
+
+        .error-message {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 68, 68, 0.5);
+        }
+
+        .back-button:active {
+            transform: translateY(0);
+        }
+
+        .error-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+    </style>
+
+    <!-- Proteksi Source Code -->
+    <script>
+        document.oncontextmenu = function() {
+            return false;
+        };
+        
+        document.onkeydown = function(e) {
+            if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73) || 
+               (e.ctrlKey && e.shiftKey && e.keyCode == 74) || 
+               (e.ctrlKey && e.keyCode == 85)) {
+                return false;
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-icon">⚠️</div>
+        <div class="error-code">404</div>
+        <div class="error-title">URL Not Found</div>
+        <div class="error-message">
+            Maaf, halaman yang Anda cari tidak ditemukan atau tidak tersedia.<br>
+            URL yang Anda masukkan tidak valid.
+        </div>
+        <button class="back-button" onclick="goHome()">Kembali ke Halaman Utama</button>
+    </div>
+
+    <script>
+        function goHome() {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>

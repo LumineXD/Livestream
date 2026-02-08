@@ -2,18 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* Proteksi: Cegah seleksi text */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
 }
 
 body {
     font-family: Arial, sans-serif;
     background: #000;
+    /* Cegah inspect element pada drag */
+    -webkit-user-drag: none;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    margin-top: 200px;
+    margin-top: 80px;
 }
 
 video {
@@ -45,5 +53,3 @@ video {
     margin-top: 10px;
     text-align: center;
 }
-
-
