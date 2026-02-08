@@ -5,6 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Under Development</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/3/3f/JKT48_FIGHT_Official_Profile_Picture_2026.jpg" type="image/jpeg">
+    
+    <!-- Early Protection Script -->
+    <script>
+        // Proteksi paling awal
+        if (typeof window.devtoolsOpen !== 'undefined') {
+            window.location.href = '/404.html';
+        }
+        
+        // Prevent common extensions
+        window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = { isDisabled: true };
+        
+        // Override console methods
+        ['log', 'info', 'warn', 'error', 'debug'].forEach(method => {
+            const original = console[method];
+            console[method] = function() {
+                if (arguments[0] && typeof arguments[0] === 'string' && 
+                    (arguments[0].includes('react') || arguments[0].includes('devtool'))) {
+                    return;
+                }
+                return original.apply(console, arguments);
+            };
+        });
+    </script>
     
     <style>
         * {
@@ -36,6 +60,20 @@
 
     <!-- Proteksi Source Code -->
     <script>
+        // Watermark di console
+        console.log('%c⚠️ PERHATIAN! ⚠️', 'color: red; font-size: 20px; font-weight: bold;');
+        console.log('%cHalaman ini DILINDUNGI. Mengakses atau mengubah kode tanpa izin adalah ILEGAL.', 'color: red; font-size: 14px;');
+        
+        // Deteksi debugger
+        setInterval(function() {
+            const start = new Date();
+            debugger;
+            const end = new Date();
+            if (end - start > 100) {
+                window.location.href = '/404.html';
+            }
+        }, 1000);
+        
         document.oncontextmenu = function() {
             return false;
         };
@@ -43,10 +81,24 @@
         document.onkeydown = function(e) {
             if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73) || 
                (e.ctrlKey && e.shiftKey && e.keyCode == 74) || 
-               (e.ctrlKey && e.keyCode == 85)) {
+               (e.ctrlKey && e.keyCode == 85) || (e.ctrlKey && e.keyCode == 83)) {
                 return false;
             }
         };
+        
+        // Cegah copy, cut, paste
+        document.addEventListener('copy', function(e) { e.preventDefault(); });
+        document.addEventListener('cut', function(e) { e.preventDefault(); });
+        document.addEventListener('paste', function(e) { e.preventDefault(); });
+        document.addEventListener('selectstart', function(e) { e.preventDefault(); });
+        
+        // Deteksi devtools
+        setInterval(function() {
+            if (window.outerWidth - window.innerWidth > 160 || 
+                window.outerHeight - window.innerHeight > 160) {
+                window.location.href = '/404.html';
+            }
+        }, 500);
     </script>
 </head>
 <body>

@@ -5,9 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="disable-devtools" content="true">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="generator" content="Protected Application">
     <title>Livestream</title>
     
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Early Protection Script -->
+    <script>
+        // Proteksi paling awal
+        if (typeof window.devtoolsOpen !== 'undefined') {
+            window.location.href = '/404.html';
+        }
+        
+        // Prevent common extensions
+        window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = { isDisabled: true };
+        
+        // Override console methods
+        ['log', 'info', 'warn', 'error', 'debug'].forEach(method => {
+            const original = console[method];
+            console[method] = function() {
+                if (arguments[0] && typeof arguments[0] === 'string' && 
+                    (arguments[0].includes('react') || arguments[0].includes('devtool'))) {
+                    return;
+                }
+                return original.apply(console, arguments);
+            };
+        });
+    </script>
     
     <!-- Disable right-click context menu -->
     <style>
