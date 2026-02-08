@@ -3,80 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="disable-devtools" content="true">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="generator" content="Protected Application">
     <title>Livestream</title>
-    
     <link rel="stylesheet" href="style.css">
-    
-    <!-- Early Protection Script -->
-    <script>
-        // Proteksi paling awal
-        if (typeof window.devtoolsOpen !== 'undefined') {
-            window.location.href = '/404.html';
-        }
-        
-        // Prevent common extensions
-        window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = { isDisabled: true };
-        
-        // Override console methods
-        ['log', 'info', 'warn', 'error', 'debug'].forEach(method => {
-            const original = console[method];
-            console[method] = function() {
-                if (arguments[0] && typeof arguments[0] === 'string' && 
-                    (arguments[0].includes('react') || arguments[0].includes('devtool'))) {
-                    return;
-                }
-                return original.apply(console, arguments);
-            };
-        });
-    </script>
-    
-    <!-- Disable right-click context menu -->
-    <style>
-        body {
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            -webkit-touch-callout: none;
-        }
-    </style>
-    
-    <!-- Proteksi Source Code -->
-    <script>
-        // Deteksi jika Developer Tools sudah terbuka saat page load
-        const checkDevTools = setInterval(function() {
-            const threshold = 160;
-            
-            if (window.outerWidth - window.innerWidth > threshold || 
-                window.outerHeight - window.innerHeight > threshold) {
-                clearInterval(checkDevTools);
-                // Tutup halaman atau redirect
-                window.close();
-                // Jika window.close() tidak bekerja, redirect ke 404
-                if (!window.closed) {
-                    window.location.href = '/404.html';
-                }
-            }
-        }, 100);
-
-        // Disable text selection dan copy
-        document.oncontextmenu = function() {
-            return false;
-        };
-        
-        document.onkeydown = function(e) {
-            // Cegah F12, Ctrl+Shift+I, Ctrl+Shift+J
-            if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73) || 
-               (e.ctrlKey && e.shiftKey && e.keyCode == 74) || 
-               (e.ctrlKey && e.keyCode == 85)) {
-                return false;
-            }
-        };
-    </script>
 </head>
 <body>
     <div class="container">
@@ -92,3 +20,4 @@
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script src="script.js"></script>
 </body>
+</html>
