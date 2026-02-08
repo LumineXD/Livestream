@@ -88,7 +88,7 @@ document.addEventListener('mousedown', function(e) {
 
 // ============ END KEAMANAN ============
 
-const API_URL = 'https://api.ngidolihub.my.id/api/stream/v3/playback?slug=cara-meminum-ramune-2026-02-08-260201195929';
+const API_URL = 'https://server.ngidolihub.my.id/?target=https%3A%2F%2Faps12.playlist.live-video.net%2Fv1%2Fplaylist%2FCuYFt29IYiruArjZ8eQmJemOBUCpXIWPx6eZOAefnCUw7kuojXdADnbPU2Xay-7e3NRcsKC1zA7EsBbyTR36xpoEhT1Az_aTb7wE16hkpYgDFn8tGUKgImZ0B2vVq34Ai11J_yaLLbdGQ7FKOG2DYSrlKEPTbZIp2yqvDhl3L9saMd9gFtiStVuhepAi6gEdY6Uy7INtJ9-Qfd1OV70xCKWt2TX7eVbCvosMEs6b_AhqkuxzZsBlT9JYddNMcT9kXZBuNplXIwv6LK2HRsy5K1EYQ5fHmeXLzlQkYU42HrGLQnMVm03AUoeCG1oznqwEkDldD4rtLtjxN_OWl5_aKkSDolfC9edDcWbDetRLWOv7caZa2yg99qZcKbGKUOO1yNU0tzeyF1fP2wSH3HM_4zh3pyhI9DdQQ0coCmrmKfg8O8AuVIZANqlQUorl-v7mez4uuQv8WeZEsZO3nKti76p7GhqMjtYYU_XrRID9REpjqDFRNswxHuOOUSc7SpKs8GKV3jSDFfw4CXF-zvFE1z-MjywQFjVK8BV1Nx8_iR6Q5UxfH4HZutWdjo98DNYV0wXXU_u8KYPOBEKCiXRW5yfnDqvlEdKzkYE99TOoEgghaGR90OwZOra-WoEC4dPAIl7wH6vdyFnHj4NSbQaTOIqKk2y3qbRT1LzL73BQ69k5vQC2ysz55T7A33txyMw0x24yDZdRd7xGqIDjgitrYTCsMwSbQBBeZmyw-mU8fVHCQ2BiEa2lS68nLKZ8HIqDHPMz_xhg4M4VzypTLZrO0lvvbuUscQp_nm6KW6BoTCJ_ZWOYyqKjQOejOeVsJdMdccibLM5s-sFoDmAwazRUBWRzZaEs51pEx-V9YHya2bI4BVYQkgIBH4jOuFgGrkVy9qhU4PuHf9HkMCUlh-Vegweh1mIykSpBgIyibaO-QCK1qK2kZYa7xgWxaryUrvR8Kl3U_Sg3TlgOVuBKbk07h7zLsR_0qj9-2RoMPNPFO4qE_SlsJy1gIAEqCXVzLXdlc3QtMjCwDg.m3u8';
 const videoElement = document.getElementById('livestreamVideo');
 const videoSource = document.getElementById('videoSource');
 const deviceInfo = document.getElementById('deviceInfo');
@@ -150,4 +150,5 @@ document.addEventListener('DOMContentLoaded', function() {
     detectDevice();
     initLivestream();
 });
+
 
