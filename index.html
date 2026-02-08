@@ -6,7 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="disable-devtools" content="true">
     <title>Livestream</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- CSS Internal -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Proteksi: Cegah seleksi text */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #000;
+            /* Cegah inspect element pada drag */
+            -webkit-user-drag: none;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top: 80px;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+            background: #000;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .title-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 5px;
+        }
+
+        .title-image img {
+            max-width: 100px;
+            max-height: 100px;
+            width: auto;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #ccc;
+            margin: 0;
+            text-align: center;
+        }
+
+        .device-info {
+            color: #888;
+            font-size: 12px;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
     
     <!-- Disable right-click context menu -->
     <style>
@@ -58,7 +133,12 @@
             <source id="videoSource" src="" type="application/x-mpegURL">
         </video>
         
-        <h1 class="title">Cara Meminum Ramune</h1>
+        <div class="title-wrapper">
+            <div class="title-image">
+                <img src="https://id.wikipedia.org/wiki/Berkas:JKT48_FIGHT_Official_Profile_Picture_2026.jpg" alt="Profile Picture">
+            </div>
+            <h1 class="title">Cara Meminum Ramune</h1>
+        </div>
         <p class="subtitle">Minggu, 8 Februari 2026 pukul 15.45</p>
         <p class="device-info" id="deviceInfo"></p>
     </div>
