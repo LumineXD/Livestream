@@ -13,7 +13,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    margin-top: 80px;
+    margin-top: 160px;
 }
 
 video {
@@ -45,3 +45,4 @@ video {
     margin-top: 10px;
     text-align: center;
 }
+
